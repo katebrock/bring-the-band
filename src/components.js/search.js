@@ -9,14 +9,18 @@ handleSubmit(e) {
   e.preventDefault();
 
   $.ajax({
-    url: 'https://api.spotify.com/v1/search',
+    url: 'https://api.spotify.com/v1/search?q=tina&type=artist',
     type: 'GET'
-  }).then(this.handleSearchData);
+    success: this.handleSearchData
+  });
 }
 
   render () {
     return (
-
+      <div className="searchbar">
+        <input type="text" className="search" placeholder="Search" />
+        <input type="button" value="go lookin' for" />
+      </div>
     )
   }
 }

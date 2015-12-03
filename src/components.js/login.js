@@ -4,7 +4,7 @@ import {Link} from 'react-router';
 class Login extends React.Component {
   render() {
     return (
-      <form>
+      <form className="login">
         <input type="text" placeholder="username"/>
         <input type="password" placeholder="password"/>
         <input type="submit" value="login"/>
